@@ -1,0 +1,183 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\PassOptionsToPackage{lowtilde}{url}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e, normalphoto]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+    \setmainfont{Carlito}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{IFBlue}{HTML}{0F6688}
+\definecolor{IFDarkBlue}{HTML}{00425C}
+\definecolor{IFMediumBlue}{HTML}{17739A}
+\definecolor{IFLightBlue}{HTML}{228FBD}
+
+\definecolor{IFGrey}{HTML}{6D6E71}
+\definecolor{IFDarkGrey}{HTML}{231F20}
+\definecolor{IFMediumGrey}{HTML}{4D4D4F}
+\definecolor{IFLightGrey}{HTML}{808285}
+
+\colorlet{heading}{IFBlue}
+\colorlet{accent}{IFLightBlue}
+\colorlet{emphasis}{IFMediumGrey}
+\colorlet{body}{IFGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Gustavo Pasqua de Oliveira Celani}
+\tagline{Computer Engineer}
+%\photo{2.8cm}{logo}
+\personalinfo{
+    % \printinfo{symbol}{detail}
+    \printinfo{\faCalendar}{06/03/1996}
+    \email{gustavo\_celani@hotmail.com}
+    \phone{+55 (35) 9 9152-0269}
+    \location{Campinas - SP, Brazil}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+    \makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Academic Formation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection[page1sidebar]{Academic Formation}
+
+    \cvevent{Specialization - Computer Network Security}{Campinas State University (UNICAMP)}{2019}{Campinas - SP, Brazil}{}{}
+
+    \divider
+
+    \cvevent{Bachelor - Computer Engineering}{National Institute of Telecommunications (INATEL)}{2014 -- 2018}{Santa Rita do Sapucaí - MG, Brazil}{}{}
+    \begin{itemize}
+        \item Academic Excellence
+        \item Scientific Initiation at:\\Assistive Technology Development and Transfer Center (CDTTA)
+        \item Teaching Assistant of:\\Calculus I, Calculus II, Calculus III, Numerical Calculation, Algebra and Analytical Geometry, Probability and Statistics
+        \item Workshop Organizer on Computational Mathematical Tools
+        \item Project Evaluator at INATEL's Physics Seminar (SEFITEL)
+    \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Professional Experience}
+
+    \cvevent{Security Software Engineer}{Samsung Computer Development Institute (SiDi)}{2018 - Current}{Campinas - SP, Brazil}{}{}
+    \begin{itemize}
+        \item Samsung Knox Security Platform (Knox System)
+        \item Security Development Lifecycle (SDL)
+        \item Android (Application, Framework, Kernel, TrustZone, Bootloader)
+        \item Cloud Server Back-End
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Internship - Embedded Software Engineer}{Leucotron Telecom}{2017 -- 2018}{Santa Rita do Sapucaí - MG, Brazil}{}{}
+    \begin{itemize}
+        \item Embedded Linux
+        \item Telecommunications
+        \item Session Initiation Protocol (SIP)
+    \end{itemize}
+
+    \divider
+
+    \cvevent{Volunteer - Knowledge Management Advisor}{CP2eJr Junior Company of INATEL}{2014 -- 2016}{Santa Rita do Sapucaí - MG, Brazil}{}{}
+
+    \divider
+
+    \cvevent{Apprentice - Administrative Assistant}{Infoserv Commerce \& Distribution}{2012 -- 2014}{Guaxupé - MG, Brazil}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page Break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{fullwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Certifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Certifications}
+
+    \cvevent{SFPC - Scrum Foundation Professional Certificate}{CertiProf}{2020}{}{TLSZLTTKHG-MMTSPHSQ-RPFLTJSPTR}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Personal Projects}
+
+    \cvevent{Elliptical Curve Cryptography: Definition and Recommendations}{Campinas State University (UNICAMP)}{2019}{Campinas - SP, Brazil}{}{}
+    
+    \divider
+
+    \cvevent{Artificial Neural Networks Applied to the Generation and Exchange of Binary Cryptographic Keys}{National Institute of Telecommunications (INATEL)}{2018}{Santa Rita do Sapucaí - MG, Brazil}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Publications}
+
+    \cvevent{SensePro - Sensory Prosthesis of Upper Limb}{2019 - Atena Editora: The Production of Knowledge in Biomedical Engineering\\2016 - Brazilian Congress of Biomedical Engineering (CBEB)}{}{}{https://www.atenaeditora.com.br/wp-content/uploads/2019/06/Ebook-A-Producao-do-Conhecimento-na-Engenharia-Biomedica.pdf}{http://www.sbeb.org.br/cbeb2016/pt/anais-e-certificados}
+
+    \divider
+
+    \cvevent{OSMS - Sensitive Orthosis of Upper Limb}{2016 - INATEL Scientific Initiation Congress (INCITEL)\\2015 - INATEL Technological Fair (FETIN)}{}{}{http://www.inatel.br/incitel/anais-incitel/incitel-2016-1}{http://inatel.br/fetin/revista-atual/revista-vol-3-n-2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Courses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Courses}
+
+\begin{itemize}
+    \item 2020 - Cryptography I (Stanford University over Coursera - 30h)
+    \item 2018 - Computer Forensic Techniques (4Linux - 40h)
+    \item 2018 - Fundamentals of Ethical Hacking (Udemy - 20h)
+    \item 2018 - Shell Script Programming (Udemy - 18h)
+    % \item 2018 - Hacking for Beginners (Udemy - 2h)
+    \item 2017 - Programming logic (Brasil Mais TI - 20h)
+    \item 2017 - Full SQL (Brasil Mais TI - 20h)
+    \item 2017 - Leucotron ISION IP Line Advanced Features (Leucotron - 40h)
+    \item 2017 - Java Algorithms (Softex - 40h)
+    \item 2017 - Basic Software Development Concepts (Softex - 8h)
+    \item 2017 - Introduction to JavaScript (INATEL - 4h)
+    \item 2017 - Ionic 2 Hybrid Application Development Concepts (INATEL - 4h)
+    \item 2016 - Programming Logic Object Orientation using Swift Language (Hackatruck - 50h)
+    \item 2016 - Graphical Tools: MatLab (INATEL - 18h)
+    \item 2015 - Data Bases: MySQL (INATEL - 10h)
+    \item 2015 - Behavioral Didactic Training for Assistant Teachers and PEDs (INATEL - 36h)
+    \item 2015 - Object Oriented Programming using Java (INATEL - 16h)
+    % \item 2015 - Unity 3D Game Development (INATEL - 4h)
+    % \item 2014 - Game Development in Construct 2 (INATEL - 20h)
+    % \item 2014 - Basic Development for Windows Phone (INATEL – 4h)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{fullwidth}
+\end{document}
